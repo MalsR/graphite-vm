@@ -4,6 +4,9 @@
 - name: copy carbon config
   copy: src=graphite-carbon dest=/etc/default
 
+- name: copy updated carbon configuration
+  copy: src=carbon.conf dest=/etc/carbon
+
 - name: start carbon
   service: name=carbon-cache state=started
 
